@@ -16,7 +16,21 @@ function test(){
         react: true,
         typescript: true,
     }
+    let data1 = {
+        title: "Phyton Jadi Bahasa Pemrograman Terpopuler di Dunia, Ini Alasannya",
+        start: date,
+        end: monthSet,
+        postAt: today,
+        description: `PARBOABOA -  Dalam", Phyton dinobatkan sebagai bahasa programming terpopuler di dunia saat ini.`,
+        image: "./assets/content.png",
+        node: true,
+        next: true,
+        react: true,
+        typescript: true,
+    }
     blogs.push(data)
+    blogs.push(data1)
+    blogs.push(data1)
     renderBlog()
 }
 

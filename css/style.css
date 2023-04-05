@@ -10,6 +10,7 @@ body{
     background-color: #f3f3f3;
     margin: 0;
     font-family: comic sans ms;
+    
 }
 /* GLOBAL */
 
@@ -120,6 +121,7 @@ body{
         display: flex;
         justify-content: center;
     }
+
   }
 
 
@@ -238,7 +240,7 @@ body{
 .formP {
     font-size: 20px;
     max-width: 30em;
-    margin: 3em auto;
+    margin: 5% auto;
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -256,12 +258,17 @@ body{
     background-color: rgb(255, 255, 255);
     font-family: Comic Sans Ms;
     font-size: 20px;
-    box-shadow: 0 10px 20px rgb(119, 119, 119);
 }
 
 .formP .field {
     width: 100%;
     margin: 0 0 1em 0;
+}
+.formP .field.field2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 .formP .field.half {
     width: calc(50% - 5px);
@@ -301,30 +308,33 @@ body{
     -webkit-appearance: none;
     outline: none;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgb(119, 119, 119);
 }
 
 .inputBox:checked {
     background-color: gray;
 }
 
+
+
 .bodyProject{
     background-color: rgb(238, 238, 238);
-    margin: 0 auto;
     padding: 2em;
+    border: solid 1px;
 }
 
 .BP{
-    display: grid;
+    border: solid 1px;
+    display: flex;
     flex-direction: center;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
+    
+    justify-content: space-evenly;
+    flex-flow: row wrap;
 }
+
+
 .BP2{
-    display: grid;
-    flex-direction: center;
-    justify-content: center;
-    grid-template-columns: auto auto;
+    
+    
 }
 
 .BP .item{
@@ -481,5 +491,98 @@ nav img {
     margin-right: 10px;
 }
 
+.active{
+    font-weight: bold;
+}
+
 /* Navbar */
+
+/* Navbar Responsive */
+.mobileNav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: aliceblue;
+        transition: all 5s ease;
+    }
+
+    .mobileNav-active{
+        display: flex;
+        background-color: aliceblue;
+    }
+
+    .mobileNav a{
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        margin: 5px;
+        padding: 5px;
+    }
+    
+    .mobileNav .buttonContact{
+        border-radius: 10px;
+        padding: 5px 20px; 
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-right: 10px;
+    }
+    .burger{
+        display: flex;
+    }
+
+    .toggle-button{
+        position: absolute;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        margin-top: 5px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+    }
+
+    .toggle-button .bar {
+        height: 3px;
+        width: 130%;
+        background-color: white;
+        border-radius: 10px;
+        transition: 2ms;
+    }
+
+    .nav-right{
+    display: flex;
+    flex-direction: row;
+    }
+
+    .nav-right .burger{
+            display: none;
+        }
+
+    @media only screen and (min-width: 651px) {
+        .mobileNav{
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .nav-left a {
+            display: none;
+        }
+
+        .nav-right .right{
+            display: none;
+        }
+
+        .nav-right .burger{
+            display: flex;
+            align-items: center;
+            margin-right: 60px;
+        }
+
+    }
+/* Navbar Responsive */
  

@@ -33,6 +33,8 @@ function getData(){
     console.log(data)
 }
 
+$("#button").click(function(){
+    $(".mobileNav").toggleClass("mobileNav-active");
+ });
 
-  
 
